@@ -9,14 +9,12 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 import java.util.Optional;
 
-@Service
 public class MemberService { // 비즈니스 로직
     
 //    private final MemberRepository memberRepository = new MemoryMemberRepository();
     private final MemberRepository memberRepository;
 
     //command+n
-    @Autowired
     public MemberService(MemberRepository memberRepository) { //외부에서 넣어주게 바꿈 : DI(dependency injection)
         this.memberRepository = memberRepository;
     }

@@ -8,7 +8,8 @@ import org.springframework.stereotype.Controller;
 public class MemberController {
 
 //    private final MemberService memberService = new MemberService();
-    private final MemberService memberService;
+    private MemberService memberService;
+
 
     @Autowired //스프링컨테이너에서 memberService를 가져옴
     public MemberController(MemberService memberService) { //생성자
