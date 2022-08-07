@@ -38,7 +38,7 @@ public class MemberService { // 비즈니스 로직
     }
 
     private void validateDuplicateMember(Member member) {
-        memberRepository.findByName(member.getName()) //option + command + shift + L
+        memberRepository.findByName (member.getName()) //option + command + shift + L
                .ifPresent(member1 -> {
                    throw new IllegalStateException("이미 존재 하는 회원입니다."); //control + t
                });
