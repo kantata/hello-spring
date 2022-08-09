@@ -20,6 +20,7 @@ public class MemberController {
     @Autowired //스프링컨테이너에서 memberService를 가져옴
     public MemberController(MemberService memberService) { //생성자
         this.memberService = memberService;
+        System.out.println("memberService = " + memberService.getClass());
     }
 
     @GetMapping("/members/new") // 1.
